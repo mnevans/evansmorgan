@@ -3,12 +3,35 @@ a {
 	text-decoration: none;
 }
 
-/* ============================================================
-  PARALLAX SCROLLING
-============================================================ */
 .container {
   max-width: 960px;
   margin: 0 auto;
+}
+
+.floated_img {
+  float: left;
+  /*top right bottom left*/
+  margin: 25px 50px 25px 0px;
+  text-align: center;
+}
+
+.floated_img:last-child {
+  margin-right: 0px;
+}
+
+.floated_img:hover {
+  opacity: 0.5;
+}
+
+.work_img {
+  height: 200px; 
+  width: auto;
+}
+
+#footer {
+  float: right;
+  position: relative;
+  right: 45%;
 }
 
 section.module:last-child {
@@ -40,7 +63,7 @@ section.module.content {
   padding: 40px 0;
 }
 section.module.parallax {
-  height: 600px;
+  height: 500px;
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-attachment: fixed;

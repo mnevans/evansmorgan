@@ -1,131 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-  	<link rel="stylesheet" type="text/css" href="css/project.css">
-  	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato">
-  </head>
-  <body>
-<section class="module parallax parallax-1">
-  <div class="container">
-    <h3 id="nav"><a href="index.html">MORGAN EVANS // DESIGNER &amp; DEVELOPER</a></h3>
-    <h1>FiveThirtyEight</h1>
-  </div>
-</section>
 
-<section class="module content">
-  <div class="container">
-    <img src="img/fivethirtyeight/fivethirtyeight.png">
-    <h3 style="text-align: center;"><strong>FIVETHIRTYEIGHT (538) DISPLAY FOR TAGBOARD</strong></h3>
-    <p style="text-align: center;"><strong>Team Size:</strong> 1 | <strong>Role:</strong> Front End Designer | <strong>Software Used:</strong> Sketch, Photoshop, Sublime Text, CodePen | <strong>Date:</strong> September 2016</p>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-    <h3>BACKGROUND</h3>
-    <p>I was assigned a front end design project at the social-media curating and marketing company Tagboard, based in Redmond, WA, to complete over the span of 3 weeks. The project request emulated one that Tagboard often received, and was for analyst and FiveThirtyEight founder Nate Silver. It called for a customized analytics dashboard for Mr. Silver to use on a new television network and website in lieu of the 2016 presidential election.</p>
+    <title>Morgan Evans</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
-    <h3>OBJECTIVE</h3>
-    <p>The dashboard called for several key features, while maintaining the current FiveThirtyEight style and brand:<br/></p>
-      <ul>
-        <li><p>Show to-date poll data across the Unites States between the Republican, Democratic and Independent presidential nominees.</p></li>
-        <li><p>Pull the most current social media posts (primarily from Twitter, Facebook and Instagram), as Mr. Silver discusses the significance of poll changes on his television show.</p></li>
-        <li><p>Create an interactive element in which the audience can "vote" via social media with the following hashtags: #538Democrat, #538Republican, #538Independent.</p></li>
-        <li><p>Build an extension of the display to appear on the FiveThirtyEight site.</p></li>
-      </ul>
+    <link rel="icon" href="img/favicon.png">
+</head>
 
-  	<h3>STAKEHOLDERS</h3>
-  	<p>The stakeholder for this project was Nate Silver,  analytics guru and founder of FiveThirtyEight.</p>
+<body id="page-top">
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">M E</a>
+            </div>
+        </div>
+        <!-- /.container -->
+    </nav>
 
-  	<h3>RESEARCH + SOLUTIONS</h3>
-  	<p>The main Tagboard project point of contact gave me a specification document describing the project and Nate Silver's high level needs from the display. It was my job to take this information and ask more detailed questions and obtain assets before beginning the design. I created two Google Docs: one with <a href="img/fivethirtyeight/QuestionsforNateSilver.pdf">questions for Mr. Silver</a> and another with <a href="img/fivethirtyeight/QuestionsforTagboard.pdf">questions for the Tagboard team</a>, and then did personal research on the side about FiveThirtyEight and the different solutions that Tagboard currently offers. I summarized my findings and create a <a href="img/fivethirtyeight/538DisplayProjectProposal.pdf">project proposal</a> to confirm that I understood the project specs and communicate my plan to the Tagboard team. This took about one week in total.<br/><br/>My solutions for the display's key features were as follows:</p>
-      <ul>
-        <li>
-          <p>Show to-date poll data across the Unites States between the Republican, Democratic and Independent presidential nominees.</p>
-            <li>
-              <p><i>Reference the current FiveThirtyEight election page's style and framework to show each candidate's chance of winning, with the ability to filter the statistics by state.</i></p>
-            </li>
-        </li>
-        <li>
-          <p>Pull the most current social media posts (primarily from Twitter, Facebook and Instagram), as Mr. Silver discusses the significance of poll changes on his television show.</p>
-            <li>
-              <p><i>Utilize the current Tagboard "Embed" solution to embed the most recent and trending social media posts on the display that use the previously mentioned hashtags.</i></p>
-            </li>
-        </li>
-        <li>
-          <p>Create an interactive element in which the audience can "vote" via social media with the following hashtags: #538Democrat, #538Republican, #538Independent.</p>
-            <li>
-              <p><i>Utilize the current Tagboard "Hashtag Battle" feature in which the audience can use one of the previously mentioned hashtags and show the results on the display.</i></p>
-            </li>
-        </li>
-      </ul>
+    <header>
+        <div class="header-content">
+            <div class="header-content-inner">
+              <img src="img/fivethirtyeight/fivethirtyeight.png">
+              <h3><strong>FIVETHIRTYEIGHT (538) DISPLAY FOR TAGBOARD</strong></h3>
+              <p><strong>Team Size:</strong> 1 | <strong>Role:</strong> Front End Designer | <strong>Software Used:</strong> Sketch, Photoshop, Sublime Text, CodePen | <strong>Date:</strong> September 2016</p>
+            </div>
+        </div>
+    </header>
 
-    <h3>PROTOTYPES</h3>
-    <p>Based on the information from Mr. Silver and Tagboard, I was able to mockup the dashboard for a television display, mobile display and desktop extension display. I had access to the Tagboard and FiveThirtyEight branding file, and used Sketch and Photoshop to put my designs together. This took about one week.</p>
+    <section id="background">
+        <div class="container">
+            <div class="row title_row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">background</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                  <p>I was assigned a front end design project at the social-media curating and marketing company Tagboard, based in Redmond, WA, to complete over the span of 3 weeks. The project request emulated one that Tagboard often received, and was for analyst and FiveThirtyEight founder Nate Silver. It called for a customized analytics dashboard for Mr. Silver to use on a new television network and website in lieu of the 2016 presidential election.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div>
-      <h3><i>&nbsp;&nbsp;&nbsp;&nbsp;TELEVISION DISPLAY</i></h3>
-      <img src="img/fivethirtyeight/prototype-tv+1.png">
-      <img src="img/fivethirtyeight/prototype-tv+2.png">
-      <img src="img/fivethirtyeight/prototype-tv+3.png">
-      <img src="img/fivethirtyeight/prototype-tv+4.png">
-      <img src="img/fivethirtyeight/prototype-tv+5.png">
-      <img src="img/fivethirtyeight/prototype-tv+6.png">
-    </div>
+    <section id="objective">
+        <div class="container">
+            <div class="row title_row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">objective</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+            <br/>
+            <div class="row">
+                <div class="col-lg-12">
+                  <p>The dashboard called for several key features, while maintaining the current FiveThirtyEight style and brand:<br/></p>
+                    <ul>
+                      <li><p>Show to-date poll data across the Unites States between the Republican, Democratic and Independent presidential nominees.</p></li>
+                      <li><p>Pull the most current social media posts (primarily from Twitter, Facebook and Instagram), as Mr. Silver discusses the significance of poll changes on his television show.</p></li>
+                      <li><p>Create an interactive element in which the audience can "vote" via social media with the following hashtags: #538Democrat, #538Republican, #538Independent.</p></li>
+                      <li><p>Build an extension of the display to appear on the FiveThirtyEight site.</p></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div>
-      <h3><i>&nbsp;&nbsp;&nbsp;&nbsp;MOBILE DISPLAY</i></h3>
-      <img src="img/fivethirtyeight/prototype-mobile+1.png">
-      <img src="img/fivethirtyeight/prototype-mobile+2.png">
-      <img src="img/fivethirtyeight/prototype-mobile+3.png">
-      <img src="img/fivethirtyeight/prototype-mobile+4.png">
-      <img src="img/fivethirtyeight/prototype-mobile+5.png">
-      <img src="img/fivethirtyeight/prototype-mobile+6.png">
-    </div>
+    <section id="stakeholders">
+        <div class="container">
+            <div class="row title_row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">stakeholders</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+            <br/>
+            <div class="row">
+                <div class="col-lg-12">
+                  <p>The stakeholder for this project was Nate Silver,  analytics guru and founder of FiveThirtyEight.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div>
-      <h3><i>&nbsp;&nbsp;&nbsp;&nbsp;DESKTOP DISPLAY</i></h3>
-      <img src="img/fivethirtyeight/prototype-desktop+1.png">
-    </div>
+    <section id="research">
+        <div class="container">
+            <div class="row title_row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">research + solutions</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+            <br/>
+            <div class="row">
+                <div class="col-lg-12">
+                  <p>The main Tagboard project point of contact gave me a specification document describing the project and Nate Silver's high level needs from the display. It was my job to take this information and ask more detailed questions and obtain assets before beginning the design. I created two Google Docs: one with <a href="img/fivethirtyeight/QuestionsforNateSilver.pdf">questions for Mr. Silver</a> and another with <a href="img/fivethirtyeight/QuestionsforTagboard.pdf">questions for the Tagboard team</a>, and then did personal research on the side about FiveThirtyEight and the different solutions that Tagboard currently offers. I summarized my findings and create a <a href="img/fivethirtyeight/538DisplayProjectProposal.pdf">project proposal</a> to confirm that I understood the project specs and communicate my plan to the Tagboard team. This took about one week in total.<br/><br/>My solutions for the display's key features were as follows:</p>
+                    <ul>
+                      <li>
+                        <p>Show to-date poll data across the Unites States between the Republican, Democratic and Independent presidential nominees.</p>
+                          <li>
+                            <p><i>Reference the current FiveThirtyEight election page's style and framework to show each candidate's chance of winning, with the ability to filter the statistics by state.</i></p>
+                          </li>
+                      </li>
+                      <li>
+                        <p>Pull the most current social media posts (primarily from Twitter, Facebook and Instagram), as Mr. Silver discusses the significance of poll changes on his television show.</p>
+                          <li>
+                            <p><i>Utilize the current Tagboard "Embed" solution to embed the most recent and trending social media posts on the display that use the previously mentioned hashtags.</i></p>
+                          </li>
+                      </li>
+                      <li>
+                        <p>Create an interactive element in which the audience can "vote" via social media with the following hashtags: #538Democrat, #538Republican, #538Independent.</p>
+                          <li>
+                            <p><i>Utilize the current Tagboard "Hashtag Battle" feature in which the audience can use one of the previously mentioned hashtags and show the results on the display.</i></p>
+                          </li>
+                      </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <h3>DEVELOPMENT + SCREENSHOTS</h3>
-  	<p>I handed my designs over to the Tagboard team, and they asked me to develop and code out the desktop display within the next 30 hours. For software, I used Sublime Text and CodePen, and coded in HTML, CSS and JavaScript to create the display. I then submitted a CodePen link to the team as the final deliverable, which is embedded below or can be found here.</p>
+    <section id="prototypes">
+        <div class="container">
+            <div class="row title_row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">prototypes</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+            <br/>
+            <div class="row">
+                <div class="col-lg-12">
+                  <p>Based on the information from Mr. Silver and Tagboard, I was able to mockup the dashboard for a television display, mobile display and desktop extension display. I had access to the Tagboard and FiveThirtyEight branding file, and used Sketch and Photoshop to put my designs together. This took about one week.</p>
 
-    <div>
-      <img src="img/fivethirtyeight/workingprototype+1.png">
-      <img src="img/fivethirtyeight/workingprototype+2.png">
-      <img src="img/fivethirtyeight/workingprototype+3.png">
-    </div>
+                  <div>
+                    <h3><i>&nbsp;&nbsp;&nbsp;&nbsp;TELEVISION DISPLAY</i></h3>
+                    <img src="img/fivethirtyeight/prototype-tv+1.png">
+                    <img src="img/fivethirtyeight/prototype-tv+2.png">
+                    <img src="img/fivethirtyeight/prototype-tv+3.png">
+                    <img src="img/fivethirtyeight/prototype-tv+4.png">
+                    <img src="img/fivethirtyeight/prototype-tv+5.png">
+                    <img src="img/fivethirtyeight/prototype-tv+6.png">
+                  </div>
 
-    <h3>WHAT I LEARNED</h3>
-    <p>Although it was not a "real" client project, per say, this was great exposure to how a client may approach me as a front end designer and ask for a customized product in a short amount of time. Working alone, I had to stay organized and on track with my project plan and maintain constant communication with the stakeholder and Tagboard employees, while also juggling all of the project management, design and development. In the end, this project was a fun challenge and really taught me how to self-manage in a professional and fast paced setting.</p>
+                  <div>
+                    <h3><i>&nbsp;&nbsp;&nbsp;&nbsp;MOBILE DISPLAY</i></h3>
+                    <img src="img/fivethirtyeight/prototype-mobile+1.png">
+                    <img src="img/fivethirtyeight/prototype-mobile+2.png">
+                    <img src="img/fivethirtyeight/prototype-mobile+3.png">
+                    <img src="img/fivethirtyeight/prototype-mobile+4.png">
+                    <img src="img/fivethirtyeight/prototype-mobile+5.png">
+                    <img src="img/fivethirtyeight/prototype-mobile+6.png">
+                  </div>
 
-    <div id="projects">
-      <p style="float: left;">FiveThirtyEight&nbsp;|&nbsp;</p>
-      
-      <a href="nordstrom.html" style="float: left;">
-            <p>Nordstrom POS&nbsp;|&nbsp;</p>
-      </a>
+                  <div>
+                    <h3><i>&nbsp;&nbsp;&nbsp;&nbsp;DESKTOP DISPLAY</i></h3>
+                    <img src="img/fivethirtyeight/prototype-desktop+1.png">
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <a href="awear.html" style="float: left;">
-            <p>aWear&nbsp;|&nbsp;</p>
-      </a>
-      <a href="learntogether.html" style="float: left;">
-            <p>Learn Together</p>
-      </a>
-    </div>
-  </div>
+    <section id="development">
+        <div class="container">
+            <div class="row title_row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">development</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+            <br/>
+            <div class="row">
+                <div class="col-lg-12">
+                  <p>I handed my designs over to the Tagboard team, and they asked me to develop and code out the desktop display within the next 30 hours. For software, I used Sublime Text and CodePen, and coded in HTML, CSS and JavaScript to create the display. I then submitted a CodePen link to the team as the final deliverable, which is embedded below or can be found here.</p>
+
+                  <div>
+                    <img src="img/fivethirtyeight/workingprototype+1.png">
+                    <img src="img/fivethirtyeight/workingprototype+2.png">
+                    <img src="img/fivethirtyeight/workingprototype+3.png">
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="findings">
+        <div class="container">
+            <div class="row title_row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">findings</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+            <br/>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Although it was not a "real" client project, per say, this was great exposure to how a client may approach me as a front end designer and ask for a customized product in a short amount of time. Working alone, I had to stay organized and on track with my project plan and maintain constant communication with the stakeholder and Tagboard employees, while also juggling all of the project management, design and development. In the end, this project was a fun challenge and really taught me how to self-manage in a professional and fast paced setting.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="work">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 work_img_row">
+                  <div>
+                    <p>FiveThirtyEight Display</p>
+                  </div>
+                  <div>
+                    <p><a href="nordstrom.html">Nordstrom POS</a></p>
+                  </div>
+                  <div>
+                    <p><a href="awear.html">aWear Mobile App</a></p>
+                  </div>
+                  <div>
+                    <p><a href="learntogether.html">Learn Together Mobile App</a></p>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </section>
 
 
-<section class="module content">
-  <div class="container" id="footer">
-    <div class="floated_img">
-      <a href="mailto:evansmorg@gmail.com"><img src="img/email.png" alt="Email"></a>
-    </div>
-    <div class="floated_img">
-      <a href="https://www.linkedin.com/in/evansmn" target="_blank"><img src="img/linkedin.png" alt="LinkedIn"></a>
-    </div>
-    <div class="floated_img">
-      <a href="https://www.github.com/mnevans" target="_blank"><img src="img/github.png" alt="Github"></a>
-    </div>
-  </div>
-</section>
-<!--     <script type="text/javascript" src="js/index.js"></script> -->
-  </body>
+    <footer>
+        <div>
+          <p>© 2018 Morgan Evans</p>
+          <div class="footer-links">
+            <a class="footer-links-img" href="mailto:evansmorg@gmail.com"><img src="img/email.png" alt="Email"></a>
+            <a class="footer-links-img" href="https://www.linkedin.com/in/evansmn" target="_blank"><img src="img/linkedin.png" alt="LinkedIn"></a>
+            <a class="footer-links-img" href="https://www.github.com/mnevans" target="_blank"><img src="img/github.png" alt="Github"></a>
+          </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script src="js/wow.min.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="js/style.js"></script>
+
+</body>
+
 </html>

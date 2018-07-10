@@ -564,3 +564,27 @@ body {
 .title_row {
   padding: 0 0 15px 0;
 }
+
+.prototypes_row {
+  display: flex;
+  margin-bottom: 50px;
+  justify-content: space-between;
+}
+
+.prototypes_row:last-child {
+  margin-bottom: 0;
+}
+
+.prototypes_row-img {
+  margin-right: 30px;
+}
+
+.development_row {
+  display: flex;
+  margin-bottom: 50px;
+  justify-content: space-between;
+}
+
+.development_row:last-child {
+  margin-bottom: 0;
+}

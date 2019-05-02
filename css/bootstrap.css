@@ -1276,9 +1276,6 @@ h6,
 .h6 {
   font-size: 12px;
 }
-p {
-  margin: 0 0 10px;
-}
 .lead {
   margin-bottom: 20px;
   font-size: 16px;
@@ -1566,21 +1563,7 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-}
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
-}
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
+  width: 750px;
 }
 .container-fluid {
   padding-right: 15px;
@@ -3919,7 +3902,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-tabs > li.active > a:focus {
   color: #555;
   cursor: default;
-  background-color: #fff;
+  background-color: transparent;
   border: 1px solid #ddd;
   border-bottom-color: transparent;
 }

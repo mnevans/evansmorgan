@@ -566,4 +566,32 @@ ul {
   margin-bottom: 0;
 }
 
-/*photo gallery*/
+.nordstrom-diagrams {
+  display: flex;
+  align-items: center;
+}
+
+.nordstrom-diagrams img {
+  width: 50%;
+  height: 50%;
+}
+
+.nordstrom-diagrams img:first-child {
+  margin-right: 15px;
+}
+
+@media (max-width: 768px) {
+  .nordstrom-diagrams {
+    flex-direction: column;
+  }
+
+  .nordstrom-diagrams img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .nordstrom-diagrams img:first-child {
+    margin-bottom: 15px;
+    margin-right: 0;
+  }
+}

@@ -184,9 +184,23 @@ header .header-content {
 
 .header-tagline {
   font-family: 'Cookie', cursive;
-  font-size: 68px;
-  margin-bottom: 20px;
+  font-size: 280px;
+  line-height: 280px;
   color: #00778B;
+}
+
+@media (max-width: 768px) {
+  .header-tagline {
+    font-size: 200px;
+    line-height: 200px;
+  }
+}
+
+@media (max-width: 414px) {
+  .header-tagline {
+    font-size: 150px;
+    line-height: 150px;
+  }
 }
 
 .header-title {

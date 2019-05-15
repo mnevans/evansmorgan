@@ -4,5 +4,5 @@ RewriteRule ^([^\.]+)$ $1.html [NC,L]
 
 AuthType Basic
 AuthName "Password Protected Project"
-AuthUserFile /adobe/.htpasswd
+AuthUserFile /adobe/adobe.html/.htpasswd
 Require valid-user

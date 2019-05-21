@@ -7,7 +7,8 @@ body {
 body {
   font-family: 'Lato', sans-serif;
   font-size: 17px;
-  background-color: rgba(174, 200, 206, 0.1);
+  /* background-color: rgba(174, 200, 206, 0.1); */
+  background-color: rgba(255, 219, 180, 0.3);
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -75,17 +76,18 @@ footer p {
 }
 
 .navbar-default {
-    border-color: rgba(34,34,34,.05);
-    background-color: #F5F9FA;
+    border: none;
+    background-color: #FFF4E8;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
 }
 
 .navbar-default .navbar-header .navbar-brand {
-    font-size: 38px;
-    color: #00778B;
-    font-family: 'Cookie', cursive;
+    font-size: 28px;
+    color: #663500;
+    font-family: ivymode, sans-serif;
+    font-weight: 600;
 }
 
 .navbar-default .nav > li>a,
@@ -114,7 +116,7 @@ footer p {
 
 @media(min-width:768px) {
     .navbar-default {
-        border-color: rgba(255,255,255,.3);
+        border: none;
     }
 
     /*nav link color - black*/
@@ -130,13 +132,13 @@ footer p {
     }
 
     .navbar-default.affix {
-        /* border-color: rgba(34,34,34,.05); */
+        border: none;
     }
 
     /*nav link color - purple*/
     .navbar-default.affix .navbar-header .navbar-brand {
         font-size: 30px;
-        color: #00778B;
+        color: #663500;
     }
 
     /*nav link color - black*/
@@ -215,6 +217,9 @@ header .header-content {
 .header-subtitle {
   font-size: 24px;
   z-index: 2;
+  color: #663500;
+  font-family: futura-pt, sans-serif;
+  font-weight: 500;
 }
 
 @media(min-width:768px) {

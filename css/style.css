@@ -182,7 +182,12 @@ header .header-content {
 }
 
 .colored-rectangle {
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 250px;
   box-shadow: -10px 25px 50px rgba(0, 0, 0, 0.1);
   transition: all 0.35s ease-in;
 }
@@ -191,59 +196,77 @@ header .header-content {
   box-shadow: -10px 25px 50px rgba(0, 0, 0, 0.15);
 }
 
-.adobe-rectangle {
-  height: 550px;
-  width: 450px;
-  left: 5%;
-}
-
-.adobe-rectangle:hover {
-  height: 555px;
-  width: 455px;
-}
-
-.fivethirtyeight-rectangle {
-  height: 450px;
-  width: 600px;
-  right: -45%;
-}
-
-.fivethirtyeight-rectangle:hover {
-  height: 455px;
-  width: 605px;
-}
-
-.nordstrom-rectangle {
-  height: 500px;
-  width: 500px;
-}
-
-.nordstrom-rectangle:hover {
-  height: 505px;
-  width: 505px;
-}
-
 .project-title {
-  position: absolute;
   font-weight: 600;
-  font-size: 72px;
+  font-size: 48px;
   color: #663500;
   font-family: futura-pt, sans-serif;
 }
 
-.adobe-title {
-  top: 30%;
-  right: -22%;
-}
+@media (min-width: 768px) {
+  .colored-rectangle {
+    position: relative;
+  }
 
-.fivethirtyeight-title {
-  top: 40%;
-  left: 10%;
-}
+  .adobe-rectangle {
+    height: 550px;
+    width: 450px;
+    left: 5%;
+  }
 
-.nordstrom-title {
-  top: 20%;
-  left: -8%;
+  .adobe-rectangle:hover {
+    height: 555px;
+    width: 455px;
+  }
+
+  .fivethirtyeight-rectangle {
+    height: 450px;
+    width: 600px;
+    right: -45%;
+  }
+
+  .fivethirtyeight-rectangle:hover {
+    height: 455px;
+    width: 605px;
+  }
+
+  .nordstrom-rectangle {
+    height: 500px;
+    width: 500px;
+  }
+
+  .nordstrom-rectangle:hover {
+    height: 505px;
+    width: 505px;
+  }
+
+  .project-title {
+    position: absolute;
+    font-size: 72px;
+  }
+
+  .adobe-title {
+    top: 30%;
+    right: -22%;
+  }
+
+  .fivethirtyeight-title {
+    top: 40%;
+    left: 10%;
+  }
+
+  .nordstrom-title {
+    top: 20%;
+    left: -8%;
+  }
+
+  .adobe-title-padding {
+    padding-left: 30px;
+  }
+
+  .nordstrom-title-padding {
+    padding-left: 85px;
+  }
 }
 
 .container-fluid-header {
@@ -298,7 +321,7 @@ header .header-content {
   font-weight: 500;
 }
 
-@media(min-width:768px) {
+@media (min-width: 768px) {
     header .header-content {
         position: absolute;
         top: 50%;

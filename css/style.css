@@ -7,16 +7,19 @@ body {
 body {
   font-family: 'Lato', sans-serif;
   font-size: 17px;
-  /* background-color: rgba(174, 200, 206, 0.1); */
   background-color: rgba(255, 219, 180, 0.3);
   overflow-y: auto;
   overflow-x: hidden;
 }
 
+.white-body {
+  background-color: white;
+}
+
+
 hr {
     max-width: 50px;
-    /* border-color: #ccdfcb; */
-    border-color: #00778B;
+    border-color: #FFDBB4;
     border-width: 3px;
 }
 
@@ -25,7 +28,7 @@ hr.light {
 }
 
 a {
-    color: #00778B;
+    color: #663500;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -77,7 +80,7 @@ footer p {
 
 .navbar-default {
     border: none;
-    background-color: #FFF4E8;
+    background-color: transparent;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -168,6 +171,18 @@ header .header-content {
     text-align: center;
 }
 
+.orange {
+  background-color: rgba(238,117, 72, 0.2);
+}
+
+.teal {
+  background-color: rgba(140, 220, 221, 0.2);
+}
+
+.green {
+  background-color: rgba(218,217, 74, 0.2);
+}
+
 .container-fluid-header {
   padding-right: 15px;
   padding-left: 15px;
@@ -208,18 +223,15 @@ header .header-content {
   }
 }
 
-.header-title {
+.header-title, .header-subtitle {
   font-size: 36px;
-  margin-bottom: 20px;
-  z-index: 2;
+  color: #663500;
+  font-family: futura-pt, sans-serif;
+  font-weight: 500;
 }
 
 .header-subtitle {
   font-size: 24px;
-  z-index: 2;
-  color: #663500;
-  font-family: futura-pt, sans-serif;
-  font-weight: 500;
 }
 
 @media(min-width:768px) {
@@ -534,12 +546,10 @@ body {
   justify-content: space-between;
 }
 
-@media (max-width: 768px) {
-  .skills-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.skills-item {
+  display: flex;
+  flex-direction: column;
+  max-width: 40%;
 }
 
 .work_row {
@@ -624,7 +634,23 @@ ul {
   }
 }
 
-.unicorn-img {
+.background-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.background-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.background-title {
+  font-family: futura-pt, sans-serif;
+  font-size: 22px;
+  color: #663500;
+  margin-bottom: 5px;
+}
+
+/* .unicorn-img {
   height: 150px;
   width: auto;
   position: absolute;
@@ -956,4 +982,4 @@ ul {
     display: none;
     height: 80px;
   }
-}
+} */

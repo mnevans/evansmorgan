@@ -227,11 +227,12 @@ header .header-content {
   font-size: 36px;
   color: #663500;
   font-family: futura-pt, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .header-subtitle {
   font-size: 24px;
+  font-weight: 500;
 }
 
 @media(min-width:768px) {

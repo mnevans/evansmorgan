@@ -5,7 +5,7 @@ body {
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', 'Source Sans Pro', Helvetica, sans-serif;
   font-size: 17px;
   overflow-y: auto;
   overflow-x: hidden;
@@ -213,7 +213,7 @@ header .header-content {
   display: none;
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1025 px) {
   .project-row {
     flex-direction: row;
     justify-content: space-between;

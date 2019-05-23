@@ -203,15 +203,36 @@ header .header-content {
   font-family: futura-pt, sans-serif;
 }
 
-@media (min-width: 768px) {
+.project-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-row img {
+  display: none;
+}
+
+@media (min-width: 1025px) {
+  .project-row {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .project-row img {
+    display: block;
+    position: absolute;
+  }
+
   .colored-rectangle {
     position: relative;
+    text-align: left;
+    flex: 0 0 auto;
   }
 
   .adobe-rectangle {
     height: 550px;
     width: 450px;
-    left: 5%;
   }
 
   .adobe-rectangle:hover {
@@ -222,7 +243,7 @@ header .header-content {
   .fivethirtyeight-rectangle {
     height: 450px;
     width: 600px;
-    right: -45%;
+    right: -50%;
   }
 
   .fivethirtyeight-rectangle:hover {
@@ -321,7 +342,7 @@ header .header-content {
   font-weight: 500;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
     header .header-content {
         position: absolute;
         top: 50%;
@@ -659,7 +680,7 @@ ul {
   padding-left: 25px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .work_row, .skills_row {
     flex-direction: row;
     padding: 0;

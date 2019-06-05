@@ -80,6 +80,11 @@ footer p {
     transition: all .35s;
 }
 
+.navbar-header {
+  display: flex;
+  align-items: center;
+}
+
 .navbar-default .navbar-header .navbar-brand {
     font-size: 28px;
     color: #663500;
@@ -109,6 +114,17 @@ footer p {
 .navbar-default .nav > li.active>a:hover,
 .navbar-default .nav>li.active>a:focus:hover {
     border-bottom: medium solid #ccdfcb;
+}
+
+.navbar-about {
+  font-family: futura-pt, sans-serif;
+  font-size: 22px;
+  color: #663500;
+}
+
+.navbar-about--selected {
+  font-weight: 500;
+  border-bottom: 2px solid #663500;
 }
 
 @media(min-width:768px) {

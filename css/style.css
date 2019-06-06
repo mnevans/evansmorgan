@@ -784,3 +784,15 @@ ul {
   align-items: center;
   flex-direction: column;
 }
+
+.about-image {
+  margin: 50px 0;
+  width: 90%;
+  height: auto;
+}
+
+@media (min-width: 769px) {
+  .about-image {
+    width: 70%;
+  }
+}

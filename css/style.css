@@ -745,6 +745,10 @@ ul {
 
 .prototypes_row-mobile img {
   width: 250px;
+  height: auto;
+}
+
+.prototypes_row-mobile-long img {
   height: 800px;
   object-fit: contain;
 }

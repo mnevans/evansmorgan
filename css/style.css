@@ -246,12 +246,12 @@ header .header-content {
     flex: 0 0 auto;
   }
 
-  .adobe-rectangle {
+  .manticore-rectangle {
     height: 550px;
     width: 450px;
   }
 
-  .adobe-rectangle:hover {
+  .manticore-rectangle:hover {
     height: 555px;
     width: 455px;
   }
@@ -282,9 +282,9 @@ header .header-content {
     font-size: 72px;
   }
 
-  .adobe-title {
+  .manticore-title {
     top: 30%;
-    right: -22%;
+    right: -15%;
   }
 
   .fivethirtyeight-title {
@@ -297,7 +297,7 @@ header .header-content {
     left: -8%;
   }
 
-  .adobe-title-padding {
+  .manticore-title-padding {
     padding-left: 30px;
   }
 

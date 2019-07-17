@@ -6,10 +6,3 @@
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.html [NC,L]
-
-<FilesMatch "adobe.html">
-AuthName "Member Only"
-AuthType Basic
-AuthUserFile .htpasswd
-require valid-user
-</FilesMatch>

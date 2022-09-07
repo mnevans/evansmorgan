@@ -231,17 +231,21 @@ header .header-content {
   background-color: rgba(218,217, 74, 0.2);
 }
 
+.project-row-text {
+  text-align: center;
+}
+
 @media (min-width: 1025px) {
   .project-row {
     flex-direction: row;
     justify-content: space-between;
   }
 
-  .project-row img, .project-row h2 {
+  .project-row img, .project-row-text {
     display: block;
     position: absolute;
   }
-  
+
   .colored-rectangle {
     position: relative;
     text-align: left;

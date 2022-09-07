@@ -9,6 +9,7 @@ body {
   font-size: 17px;
   overflow-y: auto;
   overflow-x: hidden;
+  background-color: rgba(255, 219, 180, 0.1);
 }
 
 hr {
@@ -172,6 +173,7 @@ header {
     text-align: center;
     color: #333;
     height: 500px;
+    background-color: rgba(255, 219, 180, 0.2);
 }
 
 header .header-content {
@@ -179,22 +181,6 @@ header .header-content {
     width: 100%;
     padding: 100px 15px;
     text-align: center;
-}
-
-.yellow {
-  background-color: rgba(255, 219, 180, 0.3);
-}
-
-.orange {
-  background-color: rgba(238,117, 72, 0.2);
-}
-
-.teal {
-  background-color: rgba(140, 220, 221, 0.2);
-}
-
-.green {
-  background-color: rgba(218,217, 74, 0.2);
 }
 
 .colored-rectangle {
@@ -229,21 +215,48 @@ header .header-content {
   display: none;
 }
 
+.photoshop-rectangle {
+  background-color: rgba(138, 198, 249, 0.2);
+}
+
+.manticore-rectangle {
+  background-color: rgba(140, 220, 221, 0.2);
+}
+
+.fivethirtyeight-rectangle {
+  background-color: rgba(238,117, 72, 0.2);
+}
+
+.nordstrom-rectangle {
+  background-color: rgba(218,217, 74, 0.2);
+}
+
 @media (min-width: 1025px) {
   .project-row {
     flex-direction: row;
     justify-content: space-between;
   }
 
-  .project-row img {
+  .project-row img, .project-row h2 {
     display: block;
     position: absolute;
   }
-
+  
   .colored-rectangle {
     position: relative;
     text-align: left;
     flex: 0 0 auto;
+  }
+
+  .photoshop-rectangle {
+    height: 450px;
+    width: 550px;
+    right: -50%;
+  }
+
+  .photoshop-rectangle:hover {
+    height: 455px;
+    width: 555px;
   }
 
   .manticore-rectangle {
@@ -280,6 +293,11 @@ header .header-content {
   .project-title {
     position: absolute;
     font-size: 72px;
+  }
+
+  .photoshop-title {
+    top: 15%;
+    right: 15%;
   }
 
   .manticore-title {

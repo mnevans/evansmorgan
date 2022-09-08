@@ -117,15 +117,21 @@ footer p {
     border-bottom: medium solid #ccdfcb;
 }
 
-.navbar-about {
+.navbar-item {
   font-family: futura-pt, sans-serif;
   font-size: 22px;
   color: #663500;
 }
 
-.navbar-about--selected {
+.navbar-item--selected {
   font-weight: 500;
   border-bottom: 2px solid #663500;
+}
+
+.navbar-default.affix {
+    border: none;
+    background-color: #FFFBF8;
+    box-shadow: 0 2px 4px -4px #888888;
 }
 
 @media(min-width:768px) {
@@ -143,10 +149,6 @@ footer p {
     .navbar-default .nav > li>a:hover,
     .navbar-default .nav>li>a:focus:hover {
         color: gray;
-    }
-
-    .navbar-default.affix {
-        border: none;
     }
 
     /*nav link color - purple*/

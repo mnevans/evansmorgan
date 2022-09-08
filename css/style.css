@@ -359,6 +359,10 @@ header .header-content {
     font-size: 200px;
     line-height: 200px;
   }
+
+  header {
+    height: auto;
+  }
 }
 
 @media (max-width: 414px) {
@@ -854,14 +858,9 @@ ul {
 
 .about-image {
   margin: 50px 0;
-  width: 70%;
+  width: 90%;
   height: auto;
-}
-
-@media (min-width: 769px) {
-  .about-image {
-    width: 70%;
-  }
+  max-width: 1080px;
 }
 
 .version-1 img {
@@ -914,4 +913,16 @@ ul {
 
 .hr-green {
   border-color: #DAD94A;
+}
+
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
 }

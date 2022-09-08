@@ -86,6 +86,11 @@ footer p {
   align-items: center;
 }
 
+.navbar-brand {
+  padding: 0 70px 0 0;
+  height: auto;
+}
+
 .navbar-default .navbar-header .navbar-brand {
     font-size: 28px;
     color: #663500;
@@ -331,8 +336,7 @@ header .header-content {
 }
 
 .container-fluid-header {
-  padding-right: 15px;
-  padding-left: 15px;
+  padding: 15px;
   margin-right: auto;
   margin-left: auto;
 }

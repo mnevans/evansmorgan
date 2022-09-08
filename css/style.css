@@ -93,6 +93,7 @@ footer p {
 
 .navbar-default .navbar-header .navbar-brand {
     font-size: 28px;
+    line-height: 28px;
     color: #663500;
     font-family: ivymode, sans-serif;
     font-weight: 600;

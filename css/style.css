@@ -231,9 +231,9 @@ header .header-content {
   background-color: rgba(140, 220, 221, 0.2);
 }
 
-.fivethirtyeight-rectangle {
+/* .fivethirtyeight-rectangle {
   background-color: rgba(238,117, 72, 0.2);
-}
+} */
 
 .nordstrom-rectangle {
   background-color: rgba(218,217, 74, 0.2);
@@ -281,7 +281,7 @@ header .header-content {
     width: 455px;
   }
 
-  .fivethirtyeight-rectangle {
+  /* .fivethirtyeight-rectangle {
     height: 450px;
     width: 600px;
     right: -50%;
@@ -290,9 +290,20 @@ header .header-content {
   .fivethirtyeight-rectangle:hover {
     height: 455px;
     width: 605px;
-  }
+  } */
 
   .nordstrom-rectangle {
+    height: 450px;
+    width: 600px;
+    right: -50%;
+  }
+
+  .nordstrom-rectangle:hover {
+    height: 455px;
+    width: 605px;
+  }
+
+  /* .nordstrom-rectangle {
     height: 500px;
     width: 500px;
   }
@@ -300,7 +311,7 @@ header .header-content {
   .nordstrom-rectangle:hover {
     height: 505px;
     width: 505px;
-  }
+  } */
 
   .project-title {
     position: absolute;
@@ -310,6 +321,7 @@ header .header-content {
   .photoshop-title {
     top: 15%;
     right: 15%;
+    text-align: right;
   }
 
   .manticore-title {
@@ -317,23 +329,23 @@ header .header-content {
     right: -15%;
   }
 
-  .fivethirtyeight-title {
+  /* .fivethirtyeight-title {
     top: 40%;
     left: 10%;
-  }
+    text-align: right;
+  } */
 
   .nordstrom-title {
+    top: 40%;
+    left: 10%;
+    text-align: right;
+  }
+
+  /* .nordstrom-title {
     top: 20%;
     left: -8%;
-  }
-
-  .manticore-title-padding {
-    padding-left: 30px;
-  }
-
-  .nordstrom-title-padding {
     padding-left: 85px;
-  }
+  } */
 }
 
 .container-fluid-header {

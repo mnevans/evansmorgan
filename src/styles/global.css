@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #fdf6ec;
+  --color-bg-secondary: #f5e8d3;
+  --color-bg-card: #f0ddc4;
+  --color-text: #1a0f07;
+  --color-text-muted: #7a5c40;
+  --color-accent: #663500;
+  --color-accent-hover: #4d2800;
+  --color-gold: #c68642;
+  --color-border: #e8d5be;
+
+  --font-display: ivymode, Georgia, serif;
+  --font-body: 'Lato', 'Source Sans Pro', Helvetica, sans-serif;
+
+  --radius-card: 2px;
+}
+
+html, body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--color-accent);
+  transition: opacity 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+::selection {
+  background: var(--color-gold);
+  color: #fff;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Project section divider */
+.section-divider {
+  width: 48px;
+  height: 3px;
+  background-color: var(--color-gold);
+  margin: 0 auto 2rem;
+}
+
+.section-divider-left {
+  margin-left: 0;
+}

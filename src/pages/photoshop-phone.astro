@@ -1,0 +1,48 @@
+---
+import ProjectLayout from '../layouts/ProjectLayout.astro';
+---
+
+<ProjectLayout
+  title="morgan evans — photoshop mobile, learn"
+  projectTitle="photoshop mobile,"
+  projectSubtitle="learn"
+  accentColor="#ede8f5"
+  accentTextColor="#663500"
+  description="Case study: Designing the learn experience for Photoshop mobile."
+>
+
+  <!-- Metadata strip -->
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-6 pb-12 mb-12 border-b border-[var(--color-border)] project-section">
+    <div>
+      <p class="text-xs tracking-[0.2em] uppercase text-[var(--color-text-muted)] mb-2">role</p>
+      <p class="text-sm">Staff Product Designer</p>
+    </div>
+    <div>
+      <p class="text-xs tracking-[0.2em] uppercase text-[var(--color-text-muted)] mb-2">company</p>
+      <p class="text-sm">Adobe</p>
+    </div>
+    <div>
+      <p class="text-xs tracking-[0.2em] uppercase text-[var(--color-text-muted)] mb-2">platform</p>
+      <p class="text-sm">iOS · Android</p>
+    </div>
+    <div>
+      <p class="text-xs tracking-[0.2em] uppercase text-[var(--color-text-muted)] mb-2">year</p>
+      <p class="text-sm">2025</p>
+    </div>
+  </div>
+
+  <div class="project-section text-center py-16">
+    <p class="text-xs tracking-[0.25em] uppercase text-[var(--color-text-muted)] mb-4">case study</p>
+    <h2 class="font-display text-2xl font-semibold text-[var(--color-accent)] mb-4">coming soon</h2>
+    <p class="text-[var(--color-text-muted)] text-sm leading-relaxed max-w-sm mx-auto">
+      This case study is in progress. In the meantime, feel free to reach out.
+    </p>
+    <a
+      href="mailto:evansmorg@gmail.com?subject=Photoshop Mobile Portfolio"
+      class="inline-block mt-8 text-sm tracking-widest uppercase text-[var(--color-accent)] border border-[var(--color-accent)] px-6 py-3 hover:bg-[var(--color-accent)] hover:text-white transition-colors no-underline"
+    >
+      get in touch
+    </a>
+  </div>
+
+</ProjectLayout>

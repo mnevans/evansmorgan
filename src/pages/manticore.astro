@@ -1,0 +1,210 @@
+---
+import ProjectLayout from '../layouts/ProjectLayout.astro';
+---
+
+<ProjectLayout
+  title="morgan evans — manticore"
+  projectTitle="collaborative"
+  projectSubtitle="photography"
+  accentColor="#d4eeee"
+  accentTextColor="#663500"
+  headerImage="/img/manticore/M_Icon.png"
+  description="Case study: Collaborative photography app design and development at Adobe."
+>
+
+  <!-- Metadata strip -->
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-6 pb-12 mb-12 border-b border-[var(--color-border)] project-section">
+    <div>
+      <p class="text-xs tracking-[0.2em] uppercase text-[var(--color-text-muted)] mb-2">role</p>
+      <p class="text-sm">UX Designer</p>
+      <p class="text-sm">Web Developer</p>
+    </div>
+    <div>
+      <p class="text-xs tracking-[0.2em] uppercase text-[var(--color-text-muted)] mb-2">software</p>
+      <p class="text-sm">Adobe XD</p>
+      <p class="text-sm">Photoshop</p>
+      <p class="text-sm">Illustrator</p>
+      <p class="text-sm">Github</p>
+    </div>
+    <div>
+      <p class="text-xs tracking-[0.2em] uppercase text-[var(--color-text-muted)] mb-2">languages</p>
+      <p class="text-sm">Elm</p>
+      <p class="text-sm">HTML</p>
+      <p class="text-sm">CSS (BEM)</p>
+    </div>
+    <div>
+      <p class="text-xs tracking-[0.2em] uppercase text-[var(--color-text-muted)] mb-2">duration</p>
+      <p class="text-sm">2.5 years</p>
+    </div>
+  </div>
+
+  <!-- Problem / Objective / Solution -->
+  <div class="grid md:grid-cols-3 gap-8 mb-16 project-section">
+    <div>
+      <p class="text-xs tracking-[0.2em] uppercase text-[var(--color-text-muted)] mb-3">problem</p>
+      <p class="text-sm leading-relaxed">There is currently no solution to manage and collaborate on photos as a small, private group, in one place.</p>
+    </div>
+    <div>
+      <p class="text-xs tracking-[0.2em] uppercase text-[var(--color-text-muted)] mb-3">objective</p>
+      <p class="text-sm leading-relaxed">To find a cross-platform solution that allows users to manage and share their photos with others in a secure space.</p>
+    </div>
+    <div>
+      <p class="text-xs tracking-[0.2em] uppercase text-[var(--color-text-muted)] mb-3">solution</p>
+      <p class="text-sm leading-relaxed">A consumer web, iOS and Android app focused on photo management, creative collaboration, elegant UI, and ML-assisted workflows.</p>
+    </div>
+  </div>
+
+  <!-- Initial Research -->
+  <div class="project-section">
+    <h2>initial research</h2>
+    <div class="section-divider section-divider-left"></div>
+    <p>
+      All initial project research was led by myself and one other designer, with some help from our two design interns.
+      Our process primarily consisted of:
+    </p>
+    <ul>
+      <li>Find internal research docs involving collaboration and photography</li>
+      <li>Meet with internal teams that work in the consumer or photography space</li>
+      <li>Conduct a competitive analysis across photo sharing applications</li>
+      <li>Create journey maps and personas to identify user pain points and wants</li>
+      <li>Receive feedback on initial prototypes from other designers</li>
+      <li>Hold internal user testing sessions</li>
+    </ul>
+    <p>
+      Our initial research began with meeting 10 potential users to learn about their interactions with photography
+      and sharing methods. We compiled our
+      <a href="/img/manticore/User-Interviews-Summary.pdf" target="_blank" rel="noopener noreferrer">key findings</a> into one document for reference.
+      Our first pass concluded with two trips to Portland, OR where we met with photographers who walked us through
+      their photo curation and sharing workflows. All interviews were filmed and compiled to guide future design iterations.
+    </p>
+    <p>Key findings included:</p>
+    <ul>
+      <li>Users want a "one stop shop" to upload, manage, share and interact with photos</li>
+      <li>No easy, intuitive way to share photos across differing tech levels, operating systems, and devices</li>
+      <li>Users want to know their photos are safe and easily shared to small, private groups</li>
+    </ul>
+  </div>
+
+  <!-- Version One -->
+  <div class="project-section">
+    <h2>version one</h2>
+    <div class="section-divider section-divider-left"></div>
+
+    <h3>personas</h3>
+    <p>
+      I worked with two other designers to create 10 personas under 3 different photography use cases:
+      wedding photography, soccer parents, and friends on a trip together.
+      The full persona document is <a href="/img/manticore/Manticore-Personas.pdf" target="_blank" rel="noopener noreferrer">here</a>.
+    </p>
+    <img src="/img/manticore/Manticore-Personas+1.png" alt="Manticore personas page 1" />
+    <img src="/img/manticore/Manticore-Personas+2.png" alt="Manticore personas page 2" />
+
+    <h3>journey map</h3>
+    <img src="/img/manticore/Manticore-Journey-Maps-1.png" alt="Manticore journey map" />
+
+    <h3>user flows</h3>
+    <div class="image-row">
+      <img src="/img/manticore/Instadobe-Collab-User-Flow.png" alt="Instadobe collaborative user flow" />
+      <img src="/img/manticore/Holiday-Card-Collab-User-Flow.png" alt="Holiday card collaborative user flow" />
+    </div>
+
+    <h3>site map</h3>
+    <img src="/img/manticore/Manticore-Site-Map.png" alt="Manticore site map" />
+
+    <h3>wireframes</h3>
+    <img src="/img/manticore/v2-wireframe+1.png" alt="Wireframe 1" />
+    <img src="/img/manticore/v2-wireframe+2.png" alt="Wireframe 2" />
+    <img src="/img/manticore/v2-wireframe+3.png" alt="Wireframe 3" />
+
+    <h3>web screens</h3>
+    <p>
+      One other designer and I collaborated to create an initial outline of
+      <a href="/img/manticore/Design-Guidelines_Brand-Traits.pdf" target="_blank" rel="noopener noreferrer">design guidelines and brand traits</a>.
+      Key descriptors: <strong>minimal, integrated, inherently social</strong> and <strong>inclusive</strong>.
+      Brand traits: <strong>approachable, encouraging, organized</strong> and <strong>expert (but not superior)</strong>.
+    </p>
+    <div class="image-row">
+      <img src="/img/manticore/v2-web+1.png" alt="Web screen 1" />
+      <img src="/img/manticore/v2-web+2.png" alt="Web screen 2" />
+    </div>
+    <div class="image-row">
+      <img src="/img/manticore/v2-web+3.png" alt="Web screen 3" />
+      <img src="/img/manticore/v2-web+4.png" alt="Web screen 4" />
+    </div>
+    <img src="/img/manticore/v2-web+5.png" alt="Web screen 5" />
+
+    <h3>mobile screens</h3>
+    <div class="image-row-3">
+      <img src="/img/manticore/v2-mobile+1.png" alt="Mobile screen 1" />
+      <img src="/img/manticore/v2-mobile+2.png" alt="Mobile screen 2" />
+      <img src="/img/manticore/v2-mobile+3.png" alt="Mobile screen 3" />
+    </div>
+    <div class="image-row">
+      <img src="/img/manticore/v2-mobile+4.png" alt="Mobile screen 4" />
+      <img src="/img/manticore/v2-mobile+5.png" alt="Mobile screen 5" />
+    </div>
+  </div>
+
+  <!-- Version Two -->
+  <div class="project-section">
+    <h2>version two</h2>
+    <div class="section-divider section-divider-left"></div>
+
+    <h3>whiteboarding</h3>
+    <p>
+      After finishing the first iteration of prototypes, I spent 2 days with the Director of Enterprise App Design,
+      who gave feedback and led brainstorming sessions. We walked through designing for the First Time User Experience
+      (FTUE) and how to know when a product is "good enough" for V1 shipping.
+    </p>
+    <p><strong>Ideas on where to go:</strong></p>
+    <ul>
+      <li>Adopt a more thorough UX process (include usability testing in every milestone)</li>
+      <li>Innovate in the collaborative space (curation, multi-user editing, easy sharing)</li>
+      <li>Start designing animations and delightful micro-interactions</li>
+    </ul>
+    <p>
+      A more thorough summary of our time together is <a href="/img/manticore/Mc+Phil.pdf" target="_blank" rel="noopener noreferrer">here</a>.
+    </p>
+    <div class="image-row">
+      <img src="/img/manticore/v3-whiteboarding+1.jpg" alt="Whiteboarding session 1" />
+      <img src="/img/manticore/v3-whiteboarding+2.jpg" alt="Whiteboarding session 2" />
+    </div>
+    <img src="/img/manticore/v3-whiteboarding+3.jpg" alt="Whiteboarding session 3" />
+
+    <h3>web screens</h3>
+    <div class="image-row">
+      <img src="/img/manticore/v3-web+1.png" alt="V2 web screen 1" />
+      <img src="/img/manticore/v3-web+2.png" alt="V2 web screen 2" />
+    </div>
+    <div class="image-row">
+      <img src="/img/manticore/v3-web+3.png" alt="V2 web screen 3" />
+      <img src="/img/manticore/v3-web+4.png" alt="V2 web screen 4" />
+    </div>
+    <div class="image-row">
+      <img src="/img/manticore/v3-web+5.png" alt="V2 web screen 5" />
+      <img src="/img/manticore/v3-web+6.png" alt="V2 web screen 6" />
+    </div>
+    <div class="image-row">
+      <img src="/img/manticore/v3-web+7.png" alt="V2 web screen 7" />
+      <img src="/img/manticore/v3-web+8.png" alt="V2 web screen 8" />
+    </div>
+    <div class="image-row">
+      <img src="/img/manticore/v3-web+9.png" alt="V2 web screen 9" />
+      <img src="/img/manticore/v3-web+10.png" alt="V2 web screen 10" />
+    </div>
+  </div>
+
+  <!-- Development -->
+  <div class="project-section">
+    <h2>development</h2>
+    <div class="section-divider section-divider-left"></div>
+    <p>
+      I started on the team by assisting with fairly simple UI changes in the codebase, and later became
+      one of 2 engineers implementing the final UI redesign and all ongoing feature development.
+      The live web application can be found <a href="https://manticore.industries/" target="_blank" rel="noopener noreferrer">here</a>.
+      We had a "soft shipment" in February 2019 with a release to all employees and their friends and family —
+      over 500 signups in the first month with very positive feedback.
+    </p>
+  </div>
+
+</ProjectLayout>

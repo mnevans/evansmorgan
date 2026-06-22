@@ -1,0 +1,298 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { createHash } from 'node:crypto';
+
+// --- PASSWORD CONFIGURATION ---
+// Change these strings to set passwords for each protected project.
+// The plaintext passwords never appear in the HTML — only the SHA-256 hashes are embedded.
+const PS_DESKTOP_PASSWORD = 'psdmodernization2026';
+const PS_DESKTOP_HASH = createHash('sha256').update(PS_DESKTOP_PASSWORD).digest('hex');
+
+const PS_PHONE_PASSWORD = 'psdmodernization2026';
+const PS_PHONE_HASH = createHash('sha256').update(PS_PHONE_PASSWORD).digest('hex');
+// ------------------------------
+---
+
+<Layout title="morgan evans design" currentPage="work">
+  <!-- Hero -->
+  <section class="min-h-[60vh] flex items-center px-8 md:px-16 py-24">
+    <div class="max-w-5xl mx-auto w-full">
+      <p class="text-sm tracking-[0.25em] uppercase text-[var(--color-text-muted)] mb-4">staff experience designer</p>
+      <h1 class="font-display text-5xl md:text-7xl lg:text-8xl font-semibold leading-[1.05] text-[var(--color-accent)] mb-8 max-w-3xl">
+        crafting digital<br />
+        <span class="font-light italic">experiences</span>
+      </h1>
+      <p class="text-lg md:text-xl text-[var(--color-text-muted)] max-w-xl leading-relaxed">
+        I lead design for high-impact engagement initiatives at Adobe. My focus is on making
+        our pro imaging applications more accessible through first-time user experiences,
+        onboarding, and in-app systems across desktop, web, and mobile.
+      </p>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="px-8 md:px-12 pb-16 space-y-4 max-w-7xl mx-auto w-full">
+
+    <!-- Photoshop Desktop — password protected -->
+    <button
+      class="block w-full text-left group cursor-pointer"
+      data-protected-link
+      data-href="/photoshop-desktop"
+      data-password-hash={PS_DESKTOP_HASH}
+      aria-label="View Photoshop Desktop case study — password required"
+    >
+      <article class="bg-[#f2e4d0] rounded-sm overflow-hidden border border-[#e0cdb0] hover:shadow-lg transition-shadow duration-300">
+        <div class="flex flex-col md:flex-row items-stretch min-h-[320px]">
+          <div class="flex-1 p-10 md:p-14 flex flex-col justify-between">
+            <div>
+              <p class="text-xs tracking-[0.2em] uppercase text-[var(--color-text-muted)] mb-3">Adobe · 2026</p>
+              <h2 class="font-display text-3xl md:text-4xl font-semibold text-[var(--color-accent)] leading-tight mb-4">
+                photoshop desktop,<br /><span class="font-light italic">modernized surfaces</span>
+              </h2>
+              <p class="text-[var(--color-text-muted)] text-sm leading-relaxed max-w-sm">
+                Leading design for engagement and onboarding systems across Photoshop's desktop surface —
+                making powerful features more accessible for all users.
+              </p>
+            </div>
+            <span class="mt-8 flex items-center gap-2 text-sm tracking-widest uppercase text-[var(--color-accent)] group-hover:opacity-60 transition-opacity">
+              <svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+              </svg>
+              view case study
+            </span>
+          </div>
+          <div class="md:w-2/5 bg-[#e8d5ba] flex items-center justify-center p-8">
+            <div class="w-12 h-12 rounded-full bg-white/60 flex items-center justify-center">
+              <svg class="w-6 h-6 text-[var(--color-accent)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </article>
+    </button>
+
+    <!-- Photoshop on the Phone, Learn — password protected -->
+    <button
+      class="block w-full text-left group cursor-pointer"
+      data-protected-link
+      data-href="/photoshop-phone"
+      data-password-hash={PS_PHONE_HASH}
+      aria-label="View Photoshop on the Phone case study — password required"
+    >
+      <article class="bg-[#ede8f5] rounded-sm overflow-hidden border border-[#d8d0ec] hover:shadow-lg transition-shadow duration-300">
+        <div class="flex flex-col md:flex-row items-stretch min-h-[320px]">
+          <div class="flex-1 p-10 md:p-14 flex flex-col justify-between">
+            <div>
+              <p class="text-xs tracking-[0.2em] uppercase text-[var(--color-text-muted)] mb-3">Adobe · 2025</p>
+              <h2 class="font-display text-3xl md:text-4xl font-semibold text-[var(--color-accent)] leading-tight mb-4">
+                photoshop mobile,<br /><span class="font-light italic">learn</span>
+              </h2>
+              <p class="text-[var(--color-text-muted)] text-sm leading-relaxed max-w-sm">
+                Designing the learn experience for Photoshop mobile — helping new users
+                discover and build skills within the app.
+              </p>
+            </div>
+            <span class="mt-8 flex items-center gap-2 text-sm tracking-widest uppercase text-[var(--color-accent)] group-hover:opacity-60 transition-opacity">
+              <svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+              </svg>
+              view case study
+            </span>
+          </div>
+          <div class="md:w-2/5 bg-[#d8d0ec] flex items-center justify-center p-8">
+            <div class="w-12 h-12 rounded-full bg-white/60 flex items-center justify-center">
+              <svg class="w-6 h-6 text-[var(--color-accent)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </article>
+    </button>
+
+    <!-- Photoshop on the Web — open, links to announcement -->
+    <article class="bg-[#daeaf8] rounded-sm overflow-hidden border border-[#c0d8ef]">
+      <div class="flex flex-col md:flex-row items-stretch min-h-[320px]">
+        <div class="flex-1 p-10 md:p-14 flex flex-col justify-between">
+          <div>
+            <p class="text-xs tracking-[0.2em] uppercase text-[var(--color-text-muted)] mb-3">Adobe · 2021–2024</p>
+            <h2 class="font-display text-3xl md:text-4xl font-semibold text-[var(--color-accent)] leading-tight mb-4">
+              photoshop<br /><span class="font-light italic">on the web</span>
+            </h2>
+            <p class="text-[var(--color-text-muted)] text-sm leading-relaxed max-w-sm">
+              Expanding Photoshop to a new platform — bringing the world's most powerful
+              imaging tool to the browser for the first time.
+            </p>
+          </div>
+          <div class="mt-8 flex gap-4">
+            <a
+              href="mailto:evansmorg@gmail.com?subject=Photoshop on the Web Portfolio"
+              class="inline-block text-sm tracking-widest uppercase text-[var(--color-accent)] border border-[var(--color-accent)] px-5 py-2.5 hover:bg-[var(--color-accent)] hover:text-white transition-colors no-underline"
+            >
+              get in touch
+            </a>
+            <a
+              href="https://www.youtube.com/watch?v=vvNoZxoMuGI"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center text-sm tracking-widest uppercase text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors no-underline"
+            >
+              watch announcement ↗
+            </a>
+          </div>
+        </div>
+        <div class="md:w-2/5 bg-[#c8dff0] flex items-center justify-center p-8 overflow-hidden">
+          <p class="font-display text-6xl font-semibold text-[#a0c4e0]/60 select-none leading-none">Ps</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Manticore -->
+    <a href="/manticore" class="block group no-underline">
+      <article class="bg-[#d4eeee] rounded-sm overflow-hidden border border-[#b8dede] hover:shadow-lg transition-shadow duration-300">
+        <div class="flex flex-col md:flex-row items-stretch min-h-[320px]">
+          <div class="flex-1 p-10 md:p-14 flex flex-col justify-between">
+            <div>
+              <p class="text-xs tracking-[0.2em] uppercase text-[var(--color-text-muted)] mb-3">Adobe · 2016–2020</p>
+              <h2 class="font-display text-3xl md:text-4xl font-semibold text-[var(--color-accent)] leading-tight mb-4">
+                collaborative<br /><span class="font-light italic">photography</span>
+              </h2>
+              <p class="text-[var(--color-text-muted)] text-sm leading-relaxed max-w-sm">
+                UX design and front-end development for a collaborative photo management application —
+                from initial research through production launch.
+              </p>
+            </div>
+            <span class="mt-8 text-sm tracking-widest uppercase text-[var(--color-accent)] group-hover:opacity-60 transition-opacity">
+              view case study →
+            </span>
+          </div>
+          <div class="md:w-2/5 overflow-hidden">
+            <img
+              src="/img/manticore/manticore-cover.png"
+              alt="Manticore collaborative photography app"
+              class="w-full h-full object-cover object-left group-hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+        </div>
+      </article>
+    </a>
+
+  </section>
+
+  <!-- Password Modal -->
+  <div
+    id="pw-modal"
+    class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/30 backdrop-blur-sm"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="pw-modal-title"
+  >
+    <div class="bg-[var(--color-bg)] border border-[var(--color-border)] p-10 max-w-sm w-full mx-4 shadow-2xl">
+      <p class="text-xs tracking-[0.25em] uppercase text-[var(--color-text-muted)] mb-2">protected project</p>
+      <h3 id="pw-modal-title" class="font-display text-2xl font-semibold text-[var(--color-accent)] mb-6">
+        enter password
+      </h3>
+      <input
+        id="pw-input"
+        type="password"
+        placeholder="password"
+        autocomplete="current-password"
+        class="w-full border border-[var(--color-border)] bg-transparent px-4 py-3 text-sm text-[var(--color-text)] placeholder:text-[var(--color-text-muted)] focus:outline-none focus:border-[var(--color-accent)] transition-colors"
+      />
+      <p id="pw-error" class="hidden mt-2 text-sm text-red-500">Incorrect password. Try again.</p>
+      <div class="flex gap-3 mt-6">
+        <button
+          id="pw-cancel"
+          class="text-sm tracking-widest uppercase border border-[var(--color-border)] text-[var(--color-text-muted)] px-5 py-3 hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] transition-colors"
+        >
+          cancel
+        </button>
+        <button
+          id="pw-submit"
+          class="flex-1 text-sm tracking-widest uppercase bg-[var(--color-accent)] text-white px-5 py-3 hover:bg-[var(--color-accent-hover)] transition-colors"
+        >
+          continue
+        </button>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<script>
+  const SESSION_KEY_PREFIX = 'pw_unlocked_';
+
+  let activeHash: string | null = null;
+  let activeHref: string | null = null;
+
+  const modal = document.getElementById('pw-modal')!;
+  const input = document.getElementById('pw-input') as HTMLInputElement;
+  const errorMsg = document.getElementById('pw-error')!;
+  const submitBtn = document.getElementById('pw-submit')!;
+  const cancelBtn = document.getElementById('pw-cancel')!;
+
+  async function sha256(message: string): Promise<string> {
+    const msgBuffer = new TextEncoder().encode(message);
+    const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+    return Array.from(new Uint8Array(hashBuffer))
+      .map(b => b.toString(16).padStart(2, '0'))
+      .join('');
+  }
+
+  function openModal(hash: string, href: string) {
+    activeHash = hash;
+    activeHref = href;
+    errorMsg.classList.add('hidden');
+    input.value = '';
+    modal.classList.remove('hidden');
+    setTimeout(() => input.focus(), 50);
+  }
+
+  function closeModal() {
+    modal.classList.add('hidden');
+    activeHash = null;
+    activeHref = null;
+    input.value = '';
+  }
+
+  async function attemptUnlock() {
+    if (!activeHash || !activeHref) return;
+    const hash = await sha256(input.value);
+    if (hash === activeHash) {
+      sessionStorage.setItem(SESSION_KEY_PREFIX + activeHash, '1');
+      window.location.href = activeHref;
+    } else {
+      errorMsg.classList.remove('hidden');
+      input.value = '';
+      input.focus();
+    }
+  }
+
+  // Wire up all protected cards
+  document.querySelectorAll<HTMLElement>('[data-protected-link]').forEach(el => {
+    el.addEventListener('click', () => {
+      const hash = el.dataset.passwordHash!;
+      const href = el.dataset.href!;
+      // If already unlocked in this session, navigate directly
+      if (sessionStorage.getItem(SESSION_KEY_PREFIX + hash)) {
+        window.location.href = href;
+        return;
+      }
+      openModal(hash, href);
+    });
+  });
+
+  submitBtn.addEventListener('click', attemptUnlock);
+
+  input.addEventListener('keydown', e => {
+    if (e.key === 'Enter') attemptUnlock();
+    if (e.key === 'Escape') closeModal();
+  });
+
+  cancelBtn.addEventListener('click', closeModal);
+
+  // Close on backdrop click
+  modal.addEventListener('click', e => {
+    if (e.target === modal) closeModal();
+  });
+</script>

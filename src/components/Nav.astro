@@ -1,0 +1,36 @@
+---
+interface Props {
+  currentPage?: 'work' | 'about';
+}
+const { currentPage = 'work' } = Astro.props;
+---
+
+<nav class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 md:px-16 py-5 bg-[var(--color-bg)]/90 backdrop-blur-sm border-b border-[var(--color-border)]">
+  <a href="/" class="font-display text-xl font-semibold text-[var(--color-accent)] no-underline hover:opacity-70 transition-opacity">
+    morgan evans
+  </a>
+  <div class="flex items-center gap-8">
+    <a
+      href="/"
+      class:list={[
+        "text-sm tracking-widest uppercase no-underline transition-all",
+        currentPage === 'work'
+          ? "text-[var(--color-accent)] font-semibold border-b-2 border-[var(--color-gold)] pb-0.5"
+          : "text-[var(--color-text-muted)] hover:text-[var(--color-accent)]"
+      ]}
+    >
+      work
+    </a>
+    <a
+      href="/about"
+      class:list={[
+        "text-sm tracking-widest uppercase no-underline transition-all",
+        currentPage === 'about'
+          ? "text-[var(--color-accent)] font-semibold border-b-2 border-[var(--color-gold)] pb-0.5"
+          : "text-[var(--color-text-muted)] hover:text-[var(--color-accent)]"
+      ]}
+    >
+      about
+    </a>
+  </div>
+</nav>

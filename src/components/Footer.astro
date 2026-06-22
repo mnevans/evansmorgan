@@ -1,0 +1,33 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-[var(--color-border)] mt-24 py-10 px-8 md:px-16">
+  <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+    <p class="text-sm text-[var(--color-text-muted)]">© {year} Morgan Evans</p>
+    <div class="flex items-center gap-6">
+      <a
+        href="mailto:evansmorg@gmail.com"
+        class="text-sm text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors no-underline tracking-wide"
+      >
+        email
+      </a>
+      <a
+        href="https://www.linkedin.com/in/evansmn"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-sm text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors no-underline tracking-wide"
+      >
+        linkedin
+      </a>
+      <a
+        href="https://www.github.com/mnevans"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-sm text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors no-underline tracking-wide"
+      >
+        github
+      </a>
+    </div>
+  </div>
+</footer>

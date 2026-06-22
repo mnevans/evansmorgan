@@ -1,0 +1,316 @@
+---
+import Layout from './Layout.astro';
+
+interface Props {
+  title: string;
+  projectTitle: string;
+  projectSubtitle?: string;
+  accentColor: string;
+  accentTextColor?: string;
+  headerImage?: string;
+  description?: string;
+}
+
+const {
+  title,
+  projectTitle,
+  projectSubtitle,
+  accentColor,
+  accentTextColor = '#663500',
+  headerImage,
+  description,
+} = Astro.props;
+---
+
+<Layout title={title} description={description}>
+
+  <!-- Back button -->
+  <div class="px-8 md:px-16 pt-10 pb-0">
+    <a
+      href="/"
+      class="inline-flex items-center gap-2 text-sm tracking-widest uppercase text-[var(--color-text-muted)] hover:text-[var(--color-accent)] no-underline transition-colors"
+    >
+      <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+      </svg>
+      all work
+    </a>
+  </div>
+
+  <!-- Project Hero -->
+  <header
+    class="w-full mt-6 py-20 md:py-28 flex items-center justify-center"
+    style={`background-color: ${accentColor};`}
+  >
+    <div class="text-center px-8">
+      {headerImage && (
+        <img
+          src={headerImage}
+          alt={projectTitle}
+          class="h-14 md:h-16 object-contain mx-auto mb-6"
+        />
+      )}
+      <h1
+        class="font-display text-3xl md:text-5xl font-semibold leading-tight"
+        style={`color: ${accentTextColor};`}
+      >
+        {projectTitle}
+        {projectSubtitle && (
+          <>
+            <br />
+            <span class="font-light italic">{projectSubtitle}</span>
+          </>
+        )}
+      </h1>
+    </div>
+  </header>
+
+  <!-- Case Study Content -->
+  <div class="max-w-3xl mx-auto px-8 md:px-12 py-20">
+    <slot />
+  </div>
+
+  <!-- Back to top -->
+  <div class="text-center pb-16 border-t border-[var(--color-border)] pt-12">
+    <a
+      href="#"
+      class="text-sm tracking-widest uppercase text-[var(--color-text-muted)] hover:text-[var(--color-accent)] no-underline transition-colors"
+    >
+      back to top
+    </a>
+  </div>
+
+</Layout>
+
+<!-- Lightbox overlay -->
+<div
+  id="lightbox"
+  class="hidden fixed inset-0 z-50 bg-black/85 flex items-center justify-center"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Image lightbox"
+>
+  <button
+    id="lb-close"
+    class="absolute top-5 right-6 text-white/70 hover:text-white text-2xl leading-none transition-colors"
+    aria-label="Close lightbox"
+  >✕</button>
+
+  <button
+    id="lb-prev"
+    class="absolute left-4 md:left-8 text-white/60 hover:text-white transition-colors p-2"
+    aria-label="Previous image"
+  >
+    <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7" />
+    </svg>
+  </button>
+
+  <div class="max-w-5xl w-full mx-16 md:mx-24 flex flex-col items-center gap-3">
+    <img
+      id="lb-img"
+      src=""
+      alt=""
+      class="max-h-[80vh] max-w-full object-contain"
+    />
+    <p id="lb-counter" class="text-white/50 text-xs tracking-widest"></p>
+  </div>
+
+  <button
+    id="lb-next"
+    class="absolute right-4 md:right-8 text-white/60 hover:text-white transition-colors p-2"
+    aria-label="Next image"
+  >
+    <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7" />
+    </svg>
+  </button>
+</div>
+
+<style>
+  /* ── Section structure ── */
+  .project-section {
+    margin-bottom: 5rem;
+  }
+  .project-section:last-child {
+    margin-bottom: 0;
+  }
+
+  /* ── Section headings ── */
+  .project-section h2 {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 0.75rem;
+  }
+  .project-section .section-divider {
+    margin-bottom: 2rem;
+  }
+
+  /* ── Body copy ── */
+  .project-section p {
+    line-height: 1.8;
+    color: var(--color-text);
+    margin-bottom: 1.25rem;
+  }
+  .project-section p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* ── Lists ── */
+  .project-section ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.25rem;
+  }
+  .project-section ul li {
+    padding-left: 1.5rem;
+    position: relative;
+    margin-bottom: 0.6rem;
+    line-height: 1.75;
+    color: var(--color-text);
+  }
+  .project-section ul li::before {
+    content: '+';
+    position: absolute;
+    left: 0;
+    color: var(--color-gold);
+    font-weight: 700;
+  }
+
+  /* ── Sub-headings ── */
+  .project-section h3 {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--color-text-muted);
+    margin: 3rem 0 1.25rem;
+    text-align: center;
+  }
+
+  /* ── Images ── */
+  .project-section img {
+    display: block;
+    max-width: 85%;
+    margin: 0 auto 1.25rem;
+    border-radius: 2px;
+    cursor: zoom-in;
+    transition: opacity 0.15s ease;
+  }
+  .project-section img:hover {
+    opacity: 0.9;
+  }
+
+  /* ── Image grids ── */
+  .image-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    max-width: 85%;
+    margin: 0 auto 1.25rem;
+  }
+  .image-row img {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .image-row-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    max-width: 85%;
+    margin: 0 auto 1.25rem;
+  }
+  .image-row-3 img {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  @media (max-width: 640px) {
+    .image-row,
+    .image-row-3 {
+      grid-template-columns: 1fr;
+      max-width: 100%;
+    }
+  }
+</style>
+
+<script>
+  // ── Lightbox ──────────────────────────────────────────────────
+  const lightbox  = document.getElementById('lightbox')!;
+  const lbImg     = document.getElementById('lb-img') as HTMLImageElement;
+  const lbCounter = document.getElementById('lb-counter')!;
+  const lbClose   = document.getElementById('lb-close')!;
+  const lbPrev    = document.getElementById('lb-prev')!;
+  const lbNext    = document.getElementById('lb-next')!;
+
+  type LbGroup = { src: string; alt: string }[];
+
+  let groups: LbGroup[] = [];
+  let currentGroup = 0;
+  let currentIndex = 0;
+
+  // Build image groups — one group per .project-section
+  document.querySelectorAll<HTMLElement>('.project-section').forEach((section, gi) => {
+    const imgs = Array.from(section.querySelectorAll<HTMLImageElement>('img'));
+    if (!imgs.length) return;
+
+    const group: LbGroup = imgs.map(img => ({ src: img.src, alt: img.alt }));
+    const gIndex = groups.length;
+    groups.push(group);
+
+    imgs.forEach((img, ii) => {
+      img.addEventListener('click', () => openLightbox(gIndex, ii));
+    });
+  });
+
+  function openLightbox(g: number, i: number) {
+    currentGroup = g;
+    currentIndex = i;
+    renderLightbox();
+    lightbox.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lightbox.classList.add('hidden');
+    document.body.style.overflow = '';
+  }
+
+  function renderLightbox() {
+    const group = groups[currentGroup];
+    const item  = group[currentIndex];
+    lbImg.src   = item.src;
+    lbImg.alt   = item.alt;
+    lbCounter.textContent = group.length > 1
+      ? `${currentIndex + 1} / ${group.length}`
+      : '';
+    lbPrev.style.visibility = currentIndex > 0 ? 'visible' : 'hidden';
+    lbNext.style.visibility = currentIndex < group.length - 1 ? 'visible' : 'hidden';
+  }
+
+  function prev() {
+    if (currentIndex > 0) { currentIndex--; renderLightbox(); }
+  }
+
+  function next() {
+    if (currentIndex < groups[currentGroup].length - 1) { currentIndex++; renderLightbox(); }
+  }
+
+  lbClose.addEventListener('click', closeLightbox);
+  lbPrev.addEventListener('click', prev);
+  lbNext.addEventListener('click', next);
+
+  lightbox.addEventListener('click', e => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener('keydown', e => {
+    if (lightbox.classList.contains('hidden')) return;
+    if (e.key === 'Escape')      closeLightbox();
+    if (e.key === 'ArrowLeft')   prev();
+    if (e.key === 'ArrowRight')  next();
+  });
+</script>
